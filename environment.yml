@@ -1,0 +1,11 @@
+name: BUFIA-AR
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - numpy
+  - pandas
+  - graphviz
+  - pip
+  - python-graphviz 
