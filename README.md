@@ -30,6 +30,11 @@ mâi
 mù.tûm
 kûn.née
 ```
+
+
+If the wordlist is not already syllabified, a syllabifier can be used. One option is available here:
+👉 https://github.com/jkodner05/syllabify
+
 ---
 
 ## ⚙️ Installation
@@ -151,7 +156,7 @@ BUFIA_AR/
 
 ---
 
-## 📖 Related Works
+## 📖 Related Papers
 
 - Chandlee, J., Eyraud, R., Heinz, J., Jardine, A., & Rawski, J. (2019, July). Learning with Partially Ordered Representations. In *Proceedings of the 16th Meeting on the Mathematics of Language* (pp. 91-101).
 
