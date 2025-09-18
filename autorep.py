@@ -17,7 +17,6 @@ import re
 import graphviz
 import numpy as np
 import pandas as pd
-from datetime import datetime
 
 # Phonology sets
 h_tone = set("áéíóú")
@@ -44,7 +43,6 @@ class Autorep:
     def __init__(self, word='', ocp_mel='', assoc=None, boundary=0):
         """
         Initialize an Autorep object.
-
         Parameters:
         - word (str): The word with tone markers.
         - tone (str): The tone markers directly extracted from the word (HFLR).

@@ -124,7 +124,7 @@ def bufia(D, t=2, s=2, m=2, format='svg', output_dir='output'):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="BUFIA-AR")
+    parser = argparse.ArgumentParser(description="BUFIA-AR: Learn phonological grammar from syllabified wordlist")
     parser.add_argument('--input', type=str, required=True, help='input syllabified wordlist')
     parser.add_argument('--output', type=str, default='output', help='filepath to save the learned graphs')
     parser.add_argument('--format', type=str, default='svg', help='save plots in what format (e.g., svg, png, pdf)')
@@ -133,6 +133,7 @@ if __name__ == "__main__":
     parser.add_argument('--m', type=int, default=2, help='mora number limit')
 
     group = parser.add_mutually_exclusive_group(required=True)
+    
     group.add_argument('-f', '--file', action='store_true', help="Print the output of the autolist (all Autorep objects)")
     group.add_argument('-learn', action='store_true', help="Learn and print a list of grammar rules")
 
