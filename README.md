@@ -130,6 +130,10 @@ The output will be saved as `.svg` files in the `output/` directory.
 python BUFIA_AR.py --input data/hausa.txt --learn
 ```
 
+Take Hausa for example, four constraints were learned:
+
+![Tone contour](output/_011_021_031.svg) ![Monotone contour](output/HL_111_211.svg) ![Rising contour](output/LH_111_211.svg) ![Alternate rising contour](output/LH_111_221.svg)
+
 ---
 
 **3. Learn grammar with custom settings**
