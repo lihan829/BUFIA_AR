@@ -13,6 +13,25 @@ It represents words as graph-structured inputs (tones, syllables, moras) and ind
 
 ---
 
+## ✨ Required
+- A syllabified wordlist with tone markers saved in a .txt file (e.g., `data/hausa.txt`). In the file, each line contains one orthographic form.
+
+```
+gáa.ɓàa
+kòo.góo
+rú.wáa
+kúm.fáa
+táf.kìi
+```
+- the contour tone are marked on the nucleaus vowel
+
+```
+mâi
+mù.tûm
+kûn.née
+```
+---
+
 ## ⚙️ Installation
 
 ### 1. Clone the repository
@@ -71,23 +90,29 @@ Choose one mode:
 
 **1. Print Autolist**
 
-The list of tuples `(tone, mora, syllable)` encodes associations across three tiers.  
-For example, given:
+To convert the provided wordlist into an autosegmental reppresentation, use this
 
-```python
-[(1, 1, 1), (1, 2, 2), (1, 3, 2)]
+```bash
+python BUFIA_AR.py --input data/hausa.txt -f
 ```
 
-This means:
+This command line will generate a list (saved in output by default). As shown below, each line provides:
+
+- A word example (only one representative word is shown; other words with the same form are omitted).
+- The tone extracted from the transcription (obey OCP).
+- The autosegmental representation in the form of tuples `(tone, mora, syllable)` encodes associations across three tiers.
+```
+ƙá.sáa,     H,      [(1, 1, 1), (1, 2, 2), (1, 3, 2)] 
+ƙùu.ráa,    LH,     [(1, 1, 1), (1, 2, 1), (2, 3, 2), (2, 4, 2)] 
+tà.ɓóo,     LH,     [(1, 1, 1), (2, 2, 2), (2, 3, 2)] 
+tú.dùu,     HL,     [(1, 1, 1), (2, 2, 2), (2, 3, 2)] 
+```
+
+Given a list of tuple associations such as: `[(1, 1, 1), (1, 2, 2), (1, 3, 2)]` :
+
 - `(1, 1, 1)` → tone 1 connects to mora 1 and syllable 1  
 - `(1, 2, 2)` → tone 1 connects to mora 2 and syllable 2  
 - `(1, 3, 2)` → tone 1 connects to mora 3 and syllable 2  
-
-To print the Autolist for a wordlist:
-
-```bash
-python BUFIA_AR.py --input data/wordlist.txt -f
-```
 
 ---
 
