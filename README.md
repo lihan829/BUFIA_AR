@@ -14,7 +14,7 @@ It represents words as graph-structured inputs (tones, syllables, moras) and ind
 ---
 
 ## ✨ Required
-- A syllabified wordlist with tone markers saved in a .txt file (e.g., `data/hausa.txt`). In the file, each line contains one orthographic form.
+- A syllabified wordlist (must have annotated tone markers) saved in a .txt file (e.g., `data/hausa.txt`). In the file, each line contains one orthographic form.
 
 ```
 gáa.ɓàa
